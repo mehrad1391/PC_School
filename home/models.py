@@ -2,7 +2,7 @@ from django.db import models
 
 class Courses(models.Model):
     title = models.CharField(max_length=100)
-    author = models.CharField
+    author = models.CharField(max_length=100)
     about = models.TextField(max_length=199)
     is_done = models.BooleanField()
     
