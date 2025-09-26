@@ -11,7 +11,7 @@ class Courses(models.Model):
     
 class session(models.Model):
     name = models.CharField(max_length=100)
-    content = models.TextField(max_length=10000000000)
+    content = models.JSONField
     course = models.ForeignKey(
         Courses,
         on_delete=models.CASCADE
