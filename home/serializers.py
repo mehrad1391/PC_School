@@ -8,7 +8,7 @@ class courseserializersapiview(serializers.ModelSerializer):
         
 class sessionsserializersapiview(serializers.ModelSerializer):
     class Meta:
-        model = session
+        model = Session
         fields = '__all__'
         
 class DeleteCoursesApiveiw(serializers.ModelSerializer):
@@ -23,10 +23,10 @@ class CoursesApiview(serializers.ModelSerializer):
 
 class sessionDeleteApiview(serializers.ModelSerializer):
     class Meta:
-        model = session
+        model = Session
         fields = '__all__'
 
 class sessionApiview(serializers.ModelSerializer):
     class Meta:
-        model = session
+        model = Session
         fields = '__all__'

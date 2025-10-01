@@ -12,7 +12,7 @@ class CoursesListApiView(generics.ListCreateAPIView):
     search_fields = ['title']
 
 class SessionsListApiView(generics.ListCreateAPIView):
-    queryset = session.objects.all()
+    queryset = Session.objects.all()
     serializer_class = sessionsserializersapiview
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['name']
