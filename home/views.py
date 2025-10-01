@@ -44,4 +44,13 @@ class sessionApiview(generics.ListAPIView):
     def get_queryset(self):
         session_id = self.kwargs['pk']
         return  Courses.objects.filter(id=session_id)
+
+class CourseUpdateApiView(generics.RetrieveUpdateAPIView):
+    queryset = Courses.objects.all()
+    serializer_class = CourseSerializer
+    lookup_field = 'pk'
     
+class SessionUpdateApiView(generics.RetrieveUpdateAPIView):
+    queryset = Session.objects.all()
+    serializer_class = SessionSerializer
+    lookup_field = 'pk'
