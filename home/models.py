@@ -20,4 +20,3 @@ class Session(models.Model):
 
     def __str__(self):
         return f'Session "{self.name}" for Course "{self.course.title}"'
-    
